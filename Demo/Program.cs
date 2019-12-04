@@ -6,8 +6,9 @@ namespace Demo
     {
         static void Main(string[] args)
         {
+            DateTime start=DateTime.Now;
             var ex=new Exercise();
-            var result=ex.FindPerfectNumber(10000);
+            var result=ex.FindPerfectNumber(1000000);
             if(result!=null)
             {
                 foreach (var item in result)
@@ -20,7 +21,8 @@ namespace Demo
             {
                 Console.WriteLine("Nothing!");
             }
-            
+            DateTime end=DateTime.Now;
+            Console.WriteLine("操作用时：{0}",end-start);
         }
     }
 }
