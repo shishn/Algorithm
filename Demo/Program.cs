@@ -8,8 +8,38 @@ namespace Demo
         static void Main(string[] args)
         {
             //TestPerfectNum();
-            TestDecryptQQ();
+            // TestDecryptQQ();
+            TestPalindrome();
         }
+        static void TestPalindrome()
+        {
+            string s="abcdcba";
+            var queue = new MyQueue();
+            queue.Init(s.ToCharArray());
+            int length=queue.Size();
+            int mid=length/2;
+            var stack=new MyStack();
+            for(int i=0;i<mid;i++)
+            {
+                stack.Push(queue.DeQueue());
+            }
+            if(length%2!=0)
+            {
+                queue.DeQueue();
+            }
+            while (!queue.IsEmpty())
+            {
+                if(stack.Pop()!=queue.DeQueue())
+                {
+                    Console.WriteLine("不是回文");
+                }
+                else
+                {
+                    Console.WriteLine("是回文");
+                }
+            }
+        }
+
         static void TestDecryptQQ()
         {
             string qq = "44724302";
