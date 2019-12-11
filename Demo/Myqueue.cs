@@ -8,6 +8,7 @@ namespace Demo
         private ArrayList list = new ArrayList();
         public MyQueue()
         {
+            //list=new ArrayList();
         }
 
         public object DeQueue()

@@ -5,55 +5,32 @@ namespace Demo
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
             //TestPerfectNum(1000000);
-            // TestDecryptQQ("44724302");
+            //TestDecryptQQ("44724302");
             TestPalindrome("abcdcba");
+            //TestFactrial(5);
+        }
+
+        static void TestFactrial(int num)
+        {
+            var ex=new Exercise();
+            Console.WriteLine("{0}的阶乘为：{1}",num,ex.Factrial(num));
         }
         static void TestPalindrome(string s)
         {
-            var queue = new MyQueue();
-            queue.Init(s.ToCharArray());
-            int length=queue.Size();
-            int mid=length/2;
-            var stack=new MyStack();
-            for(int i=0;i<mid;i++)
-            {
-                stack.Push(queue.DeQueue());
-            }
-            if(length%2!=0)
-            {
-                queue.DeQueue();
-            }
-            while (!queue.IsEmpty())
-            {
-                if((char)stack.Pop()!=(char)queue.DeQueue())
-                {
-                    Console.WriteLine("不是回文");
-                    return;
-                }
-            }
-            Console.WriteLine("是回文");
+            var ex=new Exercise();
+            Console.WriteLine(ex.IsPalindrome(s) ? "是回文" : "不是回文");
         }
 
         static void TestDecryptQQ(string qq)
         {
-            string s = "";
-            ArrayList result = new ArrayList();
-            char[] source = qq.ToCharArray();
-            var queue = new MyQueue();
-            queue.Init(source);
-            while (!queue.IsEmpty())
-            {
-                char c = (char)queue.DeQueue();
-                s += c.ToString();
-                if (!queue.IsEmpty())
-                {
-                    queue.EnQueue(queue.DeQueue());
-                }
-            }
-            Console.WriteLine(s);
+             var ex=new Exercise();
+            string s = ex.DecryptQQ(qq);
+            
+            Console.WriteLine("解密后的qq号是{0}",s);
         }
         static void TestPerfectNum(int num)
         {
