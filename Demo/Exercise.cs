@@ -102,5 +102,14 @@ namespace Demo
             return result;
 
         }
+
+        public int Fabonacci(int num)
+        {
+            if(num<=1)
+            {
+                return 1;
+            }
+            return Fabonacci(num-1)+Fabonacci(num-2);
+        }
     }
 }

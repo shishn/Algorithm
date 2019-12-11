@@ -8,12 +8,17 @@ namespace Demo
         static Exercise ex=new Exercise();
         static void Main(string[] args)
         {
-            TestPerfectNum(1000000);
+            //TestPerfectNum(1000000);
             //TestDecryptQQ("44724302");
             //TestPalindrome("abcdcba");
             //TestFactrial(5);
+            TestFabonacci(4);
         }
 
+        static void TestFabonacci(int num)
+        {
+            Console.WriteLine("第{0}位斐波那契数为：{1}",num,ex.Fabonacci(num));
+        }
         static void TestFactrial(int num)
         {
 
