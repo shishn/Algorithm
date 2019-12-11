@@ -5,29 +5,29 @@ namespace Demo
 {
     class Program
     {
-        
+        static Exercise ex=new Exercise();
         static void Main(string[] args)
         {
-            //TestPerfectNum(1000000);
+            TestPerfectNum(1000000);
             //TestDecryptQQ("44724302");
-            TestPalindrome("abcdcba");
+            //TestPalindrome("abcdcba");
             //TestFactrial(5);
         }
 
         static void TestFactrial(int num)
         {
-            var ex=new Exercise();
+
             Console.WriteLine("{0}的阶乘为：{1}",num,ex.Factrial(num));
         }
         static void TestPalindrome(string s)
         {
-            var ex=new Exercise();
+
             Console.WriteLine(ex.IsPalindrome(s) ? "是回文" : "不是回文");
         }
 
         static void TestDecryptQQ(string qq)
         {
-             var ex=new Exercise();
+
             string s = ex.DecryptQQ(qq);
             
             Console.WriteLine("解密后的qq号是{0}",s);
@@ -35,7 +35,6 @@ namespace Demo
         static void TestPerfectNum(int num)
         {
             DateTime start=DateTime.Now;
-            var ex=new Exercise();
             var result=ex.FindPerfectNumber(num);
             if(result!=null)
             {
@@ -43,7 +42,6 @@ namespace Demo
                 {
                     Console.WriteLine(item);
                 }
-                
             }
             else
             {
