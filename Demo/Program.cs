@@ -9,11 +9,10 @@ namespace Demo
         {
             //TestPerfectNum();
             // TestDecryptQQ();
-            TestPalindrome();
+            TestPalindrome("abcdcba");
         }
-        static void TestPalindrome()
+        static void TestPalindrome(string s)
         {
-            string s="abcdcba";
             var queue = new MyQueue();
             queue.Init(s.ToCharArray());
             int length=queue.Size();
@@ -29,15 +28,13 @@ namespace Demo
             }
             while (!queue.IsEmpty())
             {
-                if(stack.Pop()!=queue.DeQueue())
+                if((char)stack.Pop()!=(char)queue.DeQueue())
                 {
                     Console.WriteLine("不是回文");
-                }
-                else
-                {
-                    Console.WriteLine("是回文");
+                    return;
                 }
             }
+            Console.WriteLine("是回文");
         }
 
         static void TestDecryptQQ()
