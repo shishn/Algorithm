@@ -7,8 +7,8 @@ namespace Demo
     {
         static void Main(string[] args)
         {
-            //TestPerfectNum();
-            // TestDecryptQQ();
+            //TestPerfectNum(1000000);
+            // TestDecryptQQ("44724302");
             TestPalindrome("abcdcba");
         }
         static void TestPalindrome(string s)
@@ -37,9 +37,8 @@ namespace Demo
             Console.WriteLine("是回文");
         }
 
-        static void TestDecryptQQ()
+        static void TestDecryptQQ(string qq)
         {
-            string qq = "44724302";
             string s = "";
             ArrayList result = new ArrayList();
             char[] source = qq.ToCharArray();
@@ -56,11 +55,11 @@ namespace Demo
             }
             Console.WriteLine(s);
         }
-        static void TestPerfectNum()
+        static void TestPerfectNum(int num)
         {
             DateTime start=DateTime.Now;
             var ex=new Exercise();
-            var result=ex.FindPerfectNumber(1000000);
+            var result=ex.FindPerfectNumber(num);
             if(result!=null)
             {
                 foreach (var item in result)
