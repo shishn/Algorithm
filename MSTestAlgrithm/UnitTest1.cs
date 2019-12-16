@@ -7,7 +7,7 @@ namespace MSTestAlgrithm
     {
         private Exercise exercise=new Exercise();
         [TestMethod]
-        public void TestMethod1()
+        public void TestFactrial()
         {
             int i=3;
             Assert.AreEqual(exercise.Factrial(i),6);
