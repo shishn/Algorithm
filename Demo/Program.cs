@@ -10,9 +10,9 @@ namespace Demo
         {
             //TestPerfectNum(1000000);
             //TestDecryptQQ("44724302");
-            //TestPalindrome("abcdcba");
+            TestPalindrome("abcdcba");
             //TestFactrial(5);
-            TestFabonacci(4);
+            //TestFabonacci(4);
         }
 
         static void TestFabonacci(int num)

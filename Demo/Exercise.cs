@@ -65,7 +65,7 @@ namespace Demo
             {
                 if((char)stack.Pop()!=(char)queue.DeQueue())
                 {
-                    return false;
+                   return false;
                 }
             }
             return true;

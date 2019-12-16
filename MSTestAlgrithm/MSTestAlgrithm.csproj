@@ -12,8 +12,9 @@
     <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
     <PackageReference Include="coverlet.collector" Version="1.0.1" />
   </ItemGroup>
-<ItemGroup>
 
-    <PackageReference Include="../Demo/Demo.csproj"  />
+  <ItemGroup>
+    <ProjectReference Include="..\Demo\Demo.csproj" />
   </ItemGroup>
+
 </Project>
