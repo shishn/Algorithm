@@ -1,10 +1,20 @@
 using System;
 using System.Collections;
-
+using Demo.BookShop;
 namespace Demo
 {
     public class Exercise
     {
+        public Store BookStore()
+        {
+            Store store=new Store();
+            store.books=new Book[]{
+                new Book{Title="敏捷软件开发",Author="米奇-莱西",Price=99.00M},
+                new Book{Title="系统分析与设计",Author="约翰 W-罗伯特-史蒂芬",Price=79.00M},
+                new Book{Title="Scrum敏捷软件开发",Author="麦克-科恩",Price=69.00M}
+            };
+            return store;
+        }
         public ArrayList FindPerfectNumber(int end)
         {
             var result=new ArrayList();

@@ -1,20 +1,26 @@
-﻿using System;
+using System;
 using System.Collections;
-
+using Demo.BookShop;
 namespace Demo
 {
     class Program
     {
         static Exercise ex=new Exercise();
-        static void Main(string[] args)
-        {
+        static void Main(string[] args) {
             //TestPerfectNum(1000000);
             //TestDecryptQQ("44724302");
-            TestPalindrome("abcdcba");
+            //TestPalindrome("abcdcba");
             //TestFactrial(5);
             //TestFabonacci(4);
+            TestIEnumerableBookShop();
         }
-
+        static void TestIEnumerableBookShop()
+        {
+            foreach(Book book in ex.BookStore())
+            {
+                Console.WriteLine("书名:{0}--作者:{1}--单价:{2}",book.Title,book.Author,book.Price);
+            }
+        }
         static void TestFabonacci(int num)
         {
             Console.WriteLine("第{0}位斐波那契数为：{1}",num,ex.Fabonacci(num));
