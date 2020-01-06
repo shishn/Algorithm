@@ -58,7 +58,7 @@ namespace Demo
 
         public bool IsPalindrome(string s)
         {
-            var queue = new MyQueue();
+            var queue = new  MyQueue();
             queue.Init(s.ToCharArray());
             int length=queue.Size();
             int mid=length/2;

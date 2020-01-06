@@ -13,11 +13,13 @@ namespace Demo.BookShop
     public class Store : IEnumerable
     {
         public Book[] books;
-        public IEnumerator GetEnumerator()
+
+         public IEnumerator GetEnumerator()
         {
             return new BookEnum(this);
         }
     }
+    
     public class BookEnum : IEnumerator
     {
         int index;
@@ -39,6 +41,7 @@ namespace Demo.BookShop
         {
             if(index<_store.books.Length-1)
             {
+                //++index;
                 _currentBook=_store.books[++index];
                 return true;
             }

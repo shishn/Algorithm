@@ -12,7 +12,12 @@ namespace Demo
             //TestPalindrome("abcdcba");
             //TestFactrial(5);
             //TestFabonacci(4);
-            TestIEnumerableBookShop();
+            //TestIEnumerableBookShop();
+            TestCardGame();
+        }
+        static void TestCardGame()
+        {
+            CardGame.Deck deck=new CardGame.Deck();
         }
         static void TestIEnumerableBookShop()
         {
