@@ -14,7 +14,7 @@ namespace Demo.CardGame
             Shuffle();
             DealCards();
             player.Sort();
-            Console.WriteLine("排序后的牌{0}",player.ToString());
+            Console.WriteLine("玩家手中的牌排序后{0}",player.ToString());
         }
         public void Shuffle()
         {
